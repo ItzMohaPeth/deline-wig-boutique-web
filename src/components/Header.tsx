@@ -1,18 +1,17 @@
-
 import React, { useState, useEffect } from 'react';
 import { Search, ShoppingCart, User, Menu, X, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-
 interface HeaderProps {
   cartItemsCount?: number;
   onOpenCart?: () => void;
 }
-
-const Header: React.FC<HeaderProps> = ({ cartItemsCount = 0, onOpenCart }) => {
+const Header: React.FC<HeaderProps> = ({
+  cartItemsCount = 0,
+  onOpenCart
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 100);
@@ -20,11 +19,7 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount = 0, onOpenCart }) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  return (
-    <header className={`w-full transition-all duration-300 z-50 ${
-      isSticky ? 'fixed top-0 bg-deep-black/95 backdrop-blur-md shadow-luxury' : 'relative bg-deep-black'
-    }`}>
+  return <header className={`w-full transition-all duration-300 z-50 ${isSticky ? 'fixed top-0 bg-deep-black/95 backdrop-blur-md shadow-luxury' : 'relative bg-deep-black'}`}>
       {/* Top Bar */}
       <div className="bg-gradient-gold text-deep-black py-2 px-4">
         <div className="container mx-auto text-center text-sm font-montserrat font-semibold">
@@ -37,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount = 0, onOpenCart }) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="font-great-vibes text-4xl md:text-5xl font-bold bg-gradient-gold bg-clip-text text-transparent">
+            <h1 className="font-great-vibes text-4xl font-bold bg-gradient-gold bg-clip-text text-transparent md:text-xl">
               DELINE-WIG
             </h1>
             <p className="text-xs text-gold-300 font-montserrat tracking-widest uppercase">
@@ -49,10 +44,7 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount = 0, onOpenCart }) => {
           <div className="hidden md:flex flex-1 max-w-md mx-8">
             <div className="relative w-full">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gold-400 w-4 h-4" />
-              <Input 
-                placeholder="Rechercher une perruque..." 
-                className="pl-10 bg-deep-black-50 border-gold-500/30 focus:border-gold-400 text-white placeholder:text-gold-300"
-              />
+              <Input placeholder="Rechercher une perruque..." className="pl-10 bg-deep-black-50 border-gold-500/30 focus:border-gold-400 text-white placeholder:text-gold-300" />
             </div>
           </div>
 
@@ -94,27 +86,15 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount = 0, onOpenCart }) => {
             </Button>
 
             {/* Cart */}
-            <Button 
-              variant="ghost" 
-              size="sm" 
-              className="relative text-gold-400 hover:text-gold-300"
-              onClick={onOpenCart}
-            >
+            <Button variant="ghost" size="sm" className="relative text-gold-400 hover:text-gold-300" onClick={onOpenCart}>
               <ShoppingCart className="w-5 h-5" />
-              {cartItemsCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-gradient-gold text-deep-black text-xs rounded-full w-5 h-5 flex items-center justify-center font-montserrat font-bold animate-glow">
+              {cartItemsCount > 0 && <span className="absolute -top-2 -right-2 bg-gradient-gold text-deep-black text-xs rounded-full w-5 h-5 flex items-center justify-center font-montserrat font-bold animate-glow">
                   {cartItemsCount}
-                </span>
-              )}
+                </span>}
             </Button>
 
             {/* Mobile Menu Toggle */}
-            <Button
-              variant="ghost"
-              size="sm"
-              className="lg:hidden text-gold-400 hover:text-gold-300"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
+            <Button variant="ghost" size="sm" className="lg:hidden text-gold-400 hover:text-gold-300" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </Button>
           </div>
@@ -124,17 +104,13 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount = 0, onOpenCart }) => {
         <div className="md:hidden mt-4">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gold-400 w-4 h-4" />
-            <Input 
-              placeholder="Rechercher..." 
-              className="pl-10 bg-deep-black-50 border-gold-500/30 text-white placeholder:text-gold-300"
-            />
+            <Input placeholder="Rechercher..." className="pl-10 bg-deep-black-50 border-gold-500/30 text-white placeholder:text-gold-300" />
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="lg:hidden bg-deep-black border-t border-gold-500/20 animate-slide-up">
+      {isMenuOpen && <div className="lg:hidden bg-deep-black border-t border-gold-500/20 animate-slide-up">
           <nav className="container mx-auto px-4 py-4 space-y-4">
             <a href="#accueil" className="block font-montserrat font-medium text-white hover:text-gold-400 transition-colors">
               Accueil
@@ -149,10 +125,7 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount = 0, onOpenCart }) => {
               Contact
             </a>
           </nav>
-        </div>
-      )}
-    </header>
-  );
+        </div>}
+    </header>;
 };
-
 export default Header;
