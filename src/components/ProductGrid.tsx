@@ -58,19 +58,27 @@ const ProductGrid: React.FC<ProductGridProps> = ({
               <CardContent className="p-0">
                 {/* Product Image */}
                 <div className="relative overflow-hidden aspect-[3/4]">
-                  <div className="w-full h-full bg-gradient-to-br from-nude-100 to-pastel-pink-100 flex items-center justify-center">
-                    <span className="text-6xl">👩‍🦱</span>
-                  </div>
+                  {product.image ? (
+                    <img 
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-nude-100 to-pastel-pink-100 flex items-center justify-center">
+                      <span className="text-6xl">👩‍🦱</span>
+                    </div>
+                  )}
                   
                   {/* Badges */}
                   <div className="absolute top-3 left-3 space-y-2">
                     {product.isNew && (
-                      <span className="bg-sky-blue-500 text-white px-2 py-1 rounded-full text-xs font-montserrat font-semibold">
+                      <span className="bg-gradient-gold text-deep-black px-2 py-1 rounded-full text-xs font-montserrat font-semibold shadow-gold">
                         Nouveau
                       </span>
                     )}
                     {product.isSale && (
-                      <span className="bg-pastel-pink-500 text-white px-2 py-1 rounded-full text-xs font-montserrat font-semibold">
+                      <span className="bg-rose-quartz-500 text-white px-2 py-1 rounded-full text-xs font-montserrat font-semibold">
                         Promo
                       </span>
                     )}
@@ -86,13 +94,13 @@ const ProductGrid: React.FC<ProductGridProps> = ({
                       onToggleFavorite?.(product.id);
                     }}
                   >
-                    <Heart className="w-4 h-4 text-gray-600 hover:text-pastel-pink-500" />
+                    <Heart className="w-4 h-4 text-gray-600 hover:text-rose-quartz-500" />
                   </Button>
 
                   {/* Quick Add to Cart */}
                   <div className="absolute inset-x-4 bottom-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
                     <Button
-                      className="w-full bg-gradient-deline hover:bg-gradient-gold text-white font-montserrat font-semibold"
+                      className="w-full bg-gradient-gold hover:bg-gradient-gold-dark text-deep-black font-montserrat font-semibold shadow-gold hover:shadow-gold-lg transition-all duration-300"
                       onClick={(e) => {
                         e.stopPropagation();
                         onAddToCart?.(product);
@@ -150,7 +158,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({
           <Button 
             variant="outline"
             size="lg"
-            className="border-2 border-pastel-pink-300 text-pastel-pink-600 hover:bg-pastel-pink-50 font-montserrat font-semibold px-8 py-3"
+            className="border-2 border-gold-500 text-gold-600 hover:bg-gold-50 font-montserrat font-semibold px-8 py-3 transition-all duration-300 hover:shadow-gold"
           >
             Voir toute la collection
           </Button>

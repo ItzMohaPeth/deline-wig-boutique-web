@@ -68,37 +68,37 @@ const Index = () => {
   const newProducts: Product[] = [
     {
       id: 5,
-      name: "Virgin Hair Afro Kinky",
-      price: 135000,
-      image: "",
-      category: "Virgin Hair",
+      name: "Perruque Rouge Ondulée Premium",
+      price: 145000,
+      image: "/lovable-uploads/5a805ddf-06bb-4bd4-bee7-21520b1c9634.png",
+      category: "Perruques Colorées",
       isNew: true,
       rating: 4.9
     },
     {
       id: 6,
-      name: "Vietnam Hair Bob Cut",
-      price: 89000,
-      image: "",
-      category: "Vietnam Hair",
+      name: "Perruque Noire Lisse Longue",
+      price: 135000,
+      image: "/lovable-uploads/fc67c429-f3bf-4b02-9e4e-d55f38f491a6.png",
+      category: "Virgin Hair",
       isNew: true,
       rating: 4.8
     },
     {
       id: 7,
-      name: "Perruque Pixie Cut",
-      price: 65000,
-      image: "",
+      name: "Perruque Courte Bouclée Chic",
+      price: 89000,
+      image: "/lovable-uploads/29a10806-b108-4bdb-a7bf-affe740563a1.png",
       category: "Perruques Courtes",
       isNew: true,
       rating: 4.7
     },
     {
       id: 8,
-      name: "Perruque Ombré Hair",
-      price: 120000,
-      image: "",
-      category: "Perruques Colorées",
+      name: "Perruque Bouclée Volume",
+      price: 125000,
+      image: "/lovable-uploads/67784622-8248-4145-8935-dc80bb5abc96.png",
+      category: "Perruques Longues",
       isNew: true,
       rating: 4.8
     }
