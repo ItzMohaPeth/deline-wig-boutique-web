@@ -129,19 +129,23 @@ const Index = () => {
         
         <CategorySection />
         
-        <ProductGrid 
-          title="Produits Phares"
-          products={featuredProducts}
-          onAddToCart={handleAddToCart}
-          onToggleFavorite={handleToggleFavorite}
-        />
+        <div className="bg-deep-black py-20">
+          <ProductGrid 
+            title="Produits Phares"
+            products={featuredProducts}
+            onAddToCart={handleAddToCart}
+            onToggleFavorite={handleToggleFavorite}
+          />
+        </div>
         
-        <ProductGrid 
-          title="Nouveautés"
-          products={newProducts}
-          onAddToCart={handleAddToCart}
-          onToggleFavorite={handleToggleFavorite}
-        />
+        <div className="bg-nude-50 py-20">
+          <ProductGrid 
+            title="Nouveautés"
+            products={newProducts}
+            onAddToCart={handleAddToCart}
+            onToggleFavorite={handleToggleFavorite}
+          />
+        </div>
         
         <TestimonialsSection />
         

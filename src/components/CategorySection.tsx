@@ -57,16 +57,17 @@ const CategorySection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-nude-50 to-sky-blue-50">
+    <section className="py-20 bg-gradient-to-br from-nude-50 to-nude-100">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gray-800 mb-4">
-            Nos Catégories
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-montserrat font-bold text-deep-black mb-6">
+            Nos <span className="font-great-vibes bg-gradient-gold bg-clip-text text-transparent">Catégories</span>
           </h2>
-          <p className="text-xl font-open-sans text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl font-open-sans text-deep-black-300 max-w-2xl mx-auto leading-relaxed">
             Explorez notre vaste gamme de perruques soigneusement sélectionnées pour chaque style et occasion
           </p>
+          <div className="w-32 h-1 bg-gradient-gold mx-auto rounded-full mt-6"></div>
         </div>
 
         {/* Categories Grid */}
@@ -74,30 +75,32 @@ const CategorySection: React.FC = () => {
           {categories.map((category, index) => (
             <Card 
               key={category.id}
-              className="group cursor-pointer transition-all duration-500 hover:shadow-xl hover:-translate-y-3 border-0 bg-white/80 backdrop-blur-sm overflow-hidden animate-fade-in"
+              className="group cursor-pointer transition-all duration-500 hover:shadow-luxury hover:-translate-y-4 border border-gold-200/20 bg-white/90 backdrop-blur-sm overflow-hidden animate-fade-in hover:border-gold-400/40"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-0">
                 <div className="relative">
                   {/* Background Gradient */}
-                  <div className="h-32 bg-gradient-deline opacity-10 group-hover:opacity-20 transition-opacity duration-300"></div>
+                  <div className="h-36 bg-gradient-gold opacity-10 group-hover:opacity-20 transition-all duration-300 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+                  </div>
                   
                   {/* Icon */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-3xl">{category.icon}</span>
+                    <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-gold group-hover:scale-110 group-hover:shadow-gold-lg transition-all duration-300 border-2 border-gold-200 group-hover:border-gold-400">
+                      <span className="text-4xl">{category.icon}</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-6 text-center space-y-4">
-                  <h3 className="font-montserrat font-bold text-xl text-gray-800 group-hover:text-pastel-pink-600 transition-colors">
+                <div className="p-8 text-center space-y-4">
+                  <h3 className="font-montserrat font-bold text-2xl text-deep-black group-hover:text-gold-600 transition-colors">
                     {category.name}
                   </h3>
-                  <p className="font-open-sans text-gray-600 text-sm leading-relaxed">
+                  <p className="font-open-sans text-deep-black-300 leading-relaxed">
                     {category.description}
                   </p>
-                  <div className="inline-flex items-center space-x-2 text-sm text-sky-blue-600 font-montserrat font-semibold">
+                  <div className="inline-flex items-center space-x-2 text-sm text-gold-600 font-montserrat font-semibold bg-gold-50 px-4 py-2 rounded-full">
                     <span>{category.productCount} produits</span>
                     <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                   </div>

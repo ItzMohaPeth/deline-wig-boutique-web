@@ -63,8 +63,30 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Couleurs personnalisées DELINE-WIG
-				nude: {
+				// Nouvelle charte graphique DELINE-WIG
+				'deep-black': {
+					DEFAULT: '#1A1A1A',
+					50: '#2D2D2D',
+					100: '#262626',
+					200: '#1F1F1F',
+					300: '#1A1A1A',
+					400: '#141414',
+					500: '#0F0F0F',
+					600: '#0A0A0A'
+				},
+				'gold': {
+					50: '#FFFDF7',
+					100: '#FFF8E1',
+					200: '#FFF3C4',
+					300: '#FFED9F',
+					400: '#FFE574',
+					500: '#D4AF37',
+					600: '#B8941F',
+					700: '#9C7A0A',
+					800: '#7D6200',
+					900: '#5E4900'
+				},
+				'nude': {
 					50: '#FEFCFA',
 					100: '#FDF8F4',
 					200: '#F5E6DA',
@@ -73,34 +95,14 @@ export default {
 					500: '#DDB0A4',
 					600: '#D59E92'
 				},
-				'sky-blue': {
-					50: '#F0F9FF',
-					100: '#E0F2FE',
-					200: '#BAE6FD',
-					300: '#7DD3FC',
-					400: '#38BDF8',
-					500: '#A9D6E5',
-					600: '#0EA5E9',
-					700: '#0284C7'
-				},
-				'pastel-pink': {
+				'rose-quartz': {
 					50: '#FDF2F8',
 					100: '#FCE7F3',
 					200: '#FBCFE8',
 					300: '#F9A8D4',
-					400: '#F472B6',
-					500: '#F4B8C0',
-					600: '#EC4899',
-					700: '#DB2777'
-				},
-				gold: {
-					50: '#FFFBEB',
-					100: '#FEF3C7',
-					200: '#FDE68A',
-					300: '#FCD34D',
-					400: '#FBBF24',
-					500: '#D4AF37',
-					600: '#92400E'
+					400: '#F8B8C4',
+					500: '#F472B6',
+					600: '#EC4899'
 				}
 			},
 			borderRadius: {
@@ -160,6 +162,22 @@ export default {
 					'50%': {
 						'background-position': '100% 50%'
 					}
+				},
+				'shimmer': {
+					'0%': {
+						transform: 'translateX(-100%)'
+					},
+					'100%': {
+						transform: 'translateX(100%)'
+					}
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px rgba(212, 175, 55, 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px rgba(212, 175, 55, 0.6)'
+					}
 				}
 			},
 			animation: {
@@ -168,18 +186,29 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-up': 'slide-up 0.8s ease-out',
 				'float': 'float 3s ease-in-out infinite',
-				'gradient-flow': 'gradient-flow 3s ease infinite'
+				'gradient-flow': 'gradient-flow 3s ease infinite',
+				'shimmer': 'shimmer 2s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite'
 			},
 			backgroundImage: {
-				'gradient-deline': 'linear-gradient(135deg, #A9D6E5 0%, #F4B8C0 100%)',
-				'gradient-gold': 'linear-gradient(135deg, #D4AF37 0%, #F4B8C0 50%, #A9D6E5 100%)',
+				'gradient-gold': 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+				'gradient-gold-dark': 'linear-gradient(135deg, #D4AF37 0%, #B8941F 100%)',
+				'gradient-luxury': 'linear-gradient(135deg, #1A1A1A 0%, #D4AF37 50%, #1A1A1A 100%)',
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
 			},
 			fontFamily: {
 				'montserrat': ['Montserrat', 'sans-serif'],
 				'open-sans': ['Open Sans', 'sans-serif'],
-				'playfair': ['Playfair Display', 'serif']
+				'poppins': ['Poppins', 'sans-serif'],
+				'great-vibes': ['Great Vibes', 'cursive'],
+				'pacifico': ['Pacifico', 'cursive']
+			},
+			boxShadow: {
+				'gold': '0 4px 20px rgba(212, 175, 55, 0.3)',
+				'gold-lg': '0 10px 40px rgba(212, 175, 55, 0.4)',
+				'luxury': '0 8px 32px rgba(0, 0, 0, 0.3)',
+				'inset-gold': 'inset 0 2px 4px rgba(212, 175, 55, 0.2)'
 			}
 		}
 	},
