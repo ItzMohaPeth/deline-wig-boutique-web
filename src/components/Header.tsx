@@ -32,9 +32,7 @@ const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="font-great-vibes text-4xl font-bold bg-gradient-gold bg-clip-text text-transparent md:text-xl">
-              DELINE-WIG
-            </h1>
+            <h1 className="font-great-vibes text-4xl font-bold bg-gradient-gold bg-clip-text text-transparent md:text-3xl">Deline-Wig</h1>
             <p className="text-xs text-gold-300 font-montserrat tracking-widest uppercase">
               Élégance & Beauté Capillaire
             </p>
