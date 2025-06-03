@@ -26,42 +26,42 @@ const Index = () => {
   const featuredProducts: Product[] = [
     {
       id: 1,
-      name: "Perruque Virgin Hair Ondulée",
-      price: 125000,
-      originalPrice: 150000,
-      image: "",
-      category: "Virgin Hair",
+      name: "Perruque Bob Lisse Premium",
+      price: 89000,
+      originalPrice: 105000,
+      image: "/lovable-uploads/9059f76c-eeb0-4d82-a218-7fe645c11ba4.png",
+      category: "Perruques Courtes",
       isNew: true,
       isSale: true,
-      rating: 4.8
-    },
-    {
-      id: 2,
-      name: "Vietnam Hair Lisse Long",
-      price: 98000,
-      image: "",
-      category: "Vietnam Hair",
-      isNew: true,
       rating: 4.9
     },
     {
+      id: 2,
+      name: "Perruque Bouclée Naturelle",
+      price: 135000,
+      image: "/lovable-uploads/5a0cc022-afde-4d63-b2c8-ebd3a875b938.png",
+      category: "Virgin Hair",
+      isNew: true,
+      rating: 4.8
+    },
+    {
       id: 3,
-      name: "Perruque Courte Bouclée",
-      price: 75000,
-      originalPrice: 85000,
-      image: "",
-      category: "Perruques Courtes",
+      name: "Perruque Ondulée Volumineuse",
+      price: 125000,
+      originalPrice: 145000,
+      image: "/lovable-uploads/2c3a15c1-5f27-4d81-98b4-a1406d211908.png",
+      category: "Perruques Longues",
       isSale: true,
       rating: 4.7
     },
     {
       id: 4,
-      name: "Perruque Longue Colorée",
-      price: 110000,
-      image: "",
-      category: "Perruques Longues",
+      name: "Perruque Longue Body Wave",
+      price: 155000,
+      image: "/lovable-uploads/f3dc1859-a30f-48a4-a489-f3bee352b172.png",
+      category: "Virgin Hair",
       isNew: true,
-      rating: 4.6
+      rating: 4.9
     }
   ];
 
@@ -86,19 +86,19 @@ const Index = () => {
     },
     {
       id: 7,
-      name: "Perruque Courte Bouclée Chic",
-      price: 89000,
-      image: "/lovable-uploads/29a10806-b108-4bdb-a7bf-affe740563a1.png",
-      category: "Perruques Courtes",
+      name: "Perruque Deep Wave Luxe",
+      price: 175000,
+      image: "/lovable-uploads/bb3aebac-5080-41d9-8c62-73d4e876749d.png",
+      category: "Perruques Longues",
       isNew: true,
-      rating: 4.7
+      rating: 4.9
     },
     {
       id: 8,
-      name: "Perruque Bouclée Volume",
-      price: 125000,
-      image: "/lovable-uploads/67784622-8248-4145-8935-dc80bb5abc96.png",
-      category: "Perruques Longues",
+      name: "Perruque Lace Front Glamour",
+      price: 165000,
+      image: "/lovable-uploads/e6fbe8ee-1446-4d25-b131-97d6db0acce9.png",
+      category: "Lace Front",
       isNew: true,
       rating: 4.8
     }
