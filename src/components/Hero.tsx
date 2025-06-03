@@ -75,14 +75,18 @@ const Hero: React.FC = () => {
           {/* Hero Image */}
           <div className="relative animate-slide-up">
             <div className="relative">
-              {/* Main Image Placeholder */}
+              {/* Main Image */}
               <div className="relative overflow-hidden rounded-3xl shadow-luxury">
-                <div className="aspect-[4/5] bg-gradient-to-br from-deep-black-200 to-gold-900/20 flex items-center justify-center border border-gold-500/20">
-                  <div className="text-center space-y-6">
-                    <div className="w-40 h-40 mx-auto bg-gradient-gold rounded-full flex items-center justify-center shadow-gold-lg animate-glow">
-                      <span className="text-deep-black text-7xl">👑</span>
-                    </div>
-                    <p className="font-great-vibes text-3xl text-gold-400">Collection Premium</p>
+                <div className="aspect-[4/5] relative">
+                  <img 
+                    src="/lovable-uploads/88758ca8-9281-4d55-9c5a-af173df24e00.png"
+                    alt="Perruque Premium DELINE-WIG"
+                    className="w-full h-full object-cover rounded-3xl"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-deep-black/30 via-transparent to-transparent rounded-3xl"></div>
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <p className="font-great-vibes text-2xl text-gold-400 mb-2">Collection Premium</p>
+                    <p className="font-montserrat text-white text-lg">Perruque Lace Front Bouclée</p>
                   </div>
                 </div>
               </div>
